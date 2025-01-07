@@ -32,29 +32,32 @@
 
   } */
 
-  .container{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: 
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
     "header header . ."
     "main main . sidebar"
     "footer footer footer footer";
-    gap: 15px 10px;
-  }
-  .item-a {
-    grid-area: header;
-    background-color: blue;
-  }
-  .item-b {
-    grid-area: main;
-    background-color: aqua;
-  }
-  .item-c {
-    grid-area: sidebar;
-    background-color: yellowgreen;
-  }
-  .item-d {
-    grid-area: footer;
-    background-color: brown;
-  }
-  
+  gap: 15px 10px;
+  place-items: stretch;
+  place-content: center;
+  grid-auto-flow: row;
+
+}
+.item-a {
+  grid-area: header;
+  background-color: blue;
+}
+.item-b {
+  grid-area: main;
+  background-color: aqua;
+}
+.item-c {
+  grid-area: sidebar;
+  background-color: yellowgreen;
+}
+.item-d {
+  grid-area: footer;
+  background-color: brown;
+}
